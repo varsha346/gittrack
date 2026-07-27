@@ -1,3 +1,30 @@
 spring:
   application:
     name: gittrack
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/gittrack
+    username: postgres
+    password: v1a2r3s4h5a6
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+    show-sql: true
+
+    properties:
+      hibernate:
+        format_sql: true
+
+  graphql:
+    graphiql:
+      enabled: true
+
+
+jwt:
+    secret: 1234567890123456789012345678901234567890123456789012345678901234
+    expiration: 86400000
+
+server:
+  port: 8080
